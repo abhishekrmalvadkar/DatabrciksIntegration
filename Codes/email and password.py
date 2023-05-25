@@ -1,4 +1,16 @@
 # Databricks notebook source
+# DBTITLE 1,Scenario
+# MAGIC %md
+# MAGIC Create a pipeline to check if the file being loaded in the input path is in .csv format, If yes then trigger the notebook else send a pipeline failed message.
+# MAGIC Create an Azure Databricks service.
+# MAGIC Create a Spark cluster in Azure Databricks.
+# MAGIC Create a sample file and load it into blob storage container.
+# MAGIC Extract data from the Azure blob storage.
+# MAGIC Transform data in Azure Databricks.
+# MAGIC Load data back into blob storage in a new container.
+
+# COMMAND ----------
+
 # DBTITLE 1,Mount the input path
 dbutils.fs.mount(source = 'wasbs://may25in@demostorageabhishek.blob.core.windows.net' ,
                  mount_point = '/mnt/may25in',
