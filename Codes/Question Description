@@ -1,3 +1,5 @@
+customer type and transaction.py
+================================
 You have a PySpark DataFrame called "transactions" with the following schema:
 root
  |-- transaction_id: integer (nullable = true)
@@ -22,3 +24,17 @@ root
  |-- customer_type: string (nullable = true)
 
 The "customers" DataFrame contains the customer ID and their respective type ("regular", "premium", or "vip"). You can join the "transactions" DataFrame with the "customers" DataFrame on the "customer_id" column to get the customer type for each transaction.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+email and password.py
+=====================
+Create a pipeline to check if the file being loaded in the input path is in .csv format, If yes then trigger the notebook else send a pipeline failed message.
+Create an Azure Databricks service.
+Create a Spark cluster in Azure Databricks.
+Create a sample file and load it into blob storage container.
+Extract data from the Azure blob storage.
+Transform data in Azure Databricks [ check for null values and duplicate values, add a new column "Full Name" by concatinating first name and last name, group the data based on department and location and store the data in a new folder in the output container]
+Load data back into blob storage in a new container.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
