@@ -15,10 +15,7 @@ schema = StructType([
     StructField("website", StringType(), nullable=True)
 ])
 
-# Create an empty DataFrame with the defined schema
-#df = spark.createDataFrame([], schema)
-
-# Step 3: Make API request
+#Make API request
 df_url = "https://jsonplaceholder.typicode.com/users/1"
 
 df_response = requests.get(df_url)
@@ -27,7 +24,7 @@ df_api = df_response.json()
 print("Raw API Response:")
 print(df_api)
 
-# Step 4: Process API response
+# Process API response
 df_apiData = [{
     "id": df_api["id"],
     "name": df_api["name"],
@@ -37,12 +34,9 @@ df_apiData = [{
     "website": df_api["website"]
 }]
 
-# Step 5: Create PySpark DataFrame from API response
+# Create PySpark DataFrame from API response
 df_apiResponse = spark.createDataFrame(df_apiData, schema)
 
-#filtered_df = df_api.filter(df_api.name.startswith("Leanne"))
-
-#print("Filtered DataFrame:")
 df_apiResponse.display()
 
 
