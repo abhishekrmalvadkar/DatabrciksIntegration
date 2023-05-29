@@ -40,3 +40,9 @@ Extract data from the Azure blob storage.
 Transform data in Azure Databricks [check for null values and duplicate values, add a new column "Full Name" by concatinating first name and last name, group the data based on department and location and store the data in a new folder in the output container]
 Load data back into blob storage in a new container.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Calling rest Api's parallely.py
+===============================
+
+Create two rest api links using sample csv files.
+call multiple rest apis and apply some transformation logics.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
